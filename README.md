@@ -10,7 +10,7 @@ The main functionallity that being used is the fact that SAP systems distinguish
 
 For example, let there be `ZSUM` function which receives `FIRSTNUM` and `SECONDNUM` numbers as the input, and returns `SUMNUM` as the output. if we wish to call it, all we have to do is send the system the following:
 ```XML
-<ns0:ZSUM namespace="urn:sap-com:document:sap:rfc:functions">
+<ns0:ZSUM xmlns:ns0="urn:sap-com:document:sap:rfc:functions">
   <FIRSTNUM>1</FIRSTNUM>
   <SECONDNUM>2</SECONDNUM>
 </ns0:ZSUM>
@@ -18,9 +18,9 @@ For example, let there be `ZSUM` function which receives `FIRSTNUM` and `SECONDN
 
 and we will receive back:
 ```XML
-<response:ZSUM namespace="urn:sap-com:document:sap:rfc:functions">
+<rfc:ZSUM.Response xmlns:rfc="urn:sap-com:document:sap:rfc:functions">
   <SUMNUM>3</SUMNUM>
-</response:ZSUM>
+</rfc:ZSUM.Response>
 ```
 
 ## With REST Adapter
